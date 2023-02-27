@@ -1,8 +1,8 @@
 package com.driver.service.impl;
 
-
 import com.driver.io.entity.FoodEntity;
 import com.driver.io.repository.FoodRepository;
+//import com.driver.model.entity.FoodEntity;
 import com.driver.model.request.FoodDetailsRequestModel;
 import com.driver.model.response.FoodDetailsResponse;
 import com.driver.model.response.OperationStatusModel;
@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class FoodServiceImpl implements FoodService {
+public class FoodServiceImpl implements FoodService{
 
     @Autowired
     FoodRepository foodRepository;
@@ -136,9 +136,9 @@ public class FoodServiceImpl implements FoodService {
 
         FoodDto finalFoodDto = updateFoodDetails(id,foodDto);
 
-        //--------------------------------
+        //---------------------------------
         //Converting finalOrderDto into OrderDetailsResponse
-        //--------------------------------
+        //---------------------------------
 
         FoodDetailsResponse foodDetailsResponse = new FoodDetailsResponse();
         foodDetailsResponse.setFoodName(finalFoodDto.getFoodName());
